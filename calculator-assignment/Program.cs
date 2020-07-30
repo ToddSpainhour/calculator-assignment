@@ -23,7 +23,7 @@ namespace calculator_assignment
             var commaSeperatedListOfStrings = new string[3] { "2", "5", "3" };
             Console.WriteLine($"The array called seperatedListOfStrings returns: {commaSeperatedListOfStrings}");
             Console.WriteLine(" ");
-            Console.ReadKey(true);
+            //Console.ReadKey(true);
 
 
 
@@ -34,17 +34,17 @@ namespace calculator_assignment
 
 
             // turn comma seperated list of strings into numbers
-
+            Console.WriteLine("Inside the foreach loop of your original, comma seperated array called commaSeperatedListOfStrings returns...");
             foreach (var digit in commaSeperatedListOfStrings)
             {
                 commaSeperatedListOfIntegers.Add(int.Parse(digit));
-                Console.WriteLine($"Inside the foreach loop of your original, comma seperated array called commaSeperatedListOfStrings returns: '{digit}' and it's a '{digit.GetType()}'");
+                Console.WriteLine($"'{digit}' and it's a '{digit.GetType()}'");
                 Console.WriteLine(" ");
             }
 
             Console.WriteLine(linebreak);
             Console.WriteLine(" ");
-            Console.ReadKey(true);
+            //Console.ReadKey(true);
 
 
 
@@ -62,15 +62,24 @@ namespace calculator_assignment
             Console.WriteLine(" ");
             Console.WriteLine("Now we need to multiply them in order. For example, if we had '2, 3, 2' it should return 12 (2x3x2)");
             Console.WriteLine(" ");
-            Console.ReadKey(true);
+            //Console.ReadKey(true);
 
 
 
+            int result = 1;
 
-            // print the result of multiplying those values together
+            foreach (var individualNumber in commaSeperatedListOfIntegers)
+            {
+                Console.WriteLine($"This number is... {individualNumber}");
+                result *= individualNumber;
+                Console.WriteLine($"Inside our foreach loop to multiply the numbers together, we get: {result}");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine($"And the final result is... {result}");
 
 
-
+            Console.WriteLine(linebreak);
 
             Console.ReadKey();
 
